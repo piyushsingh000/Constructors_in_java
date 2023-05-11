@@ -1,0 +1,35 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Hero obj = new Hero("Piyush", 21);
+	     Hero obj2 = new Hero(obj);
+	     Hero obj3 = new Hero("Piyush", 21,69);
+	    obj.display();
+	    obj2.display();
+	    obj3.display();
+		
+	}
+}
+class Hero {
+    String name;
+    int age;
+    int roll;
+    
+    Hero(String n, int a){
+        name = n;
+        age = a;
+    }
+    Hero(String n, int a, int r){
+        name = n;
+        age =a;
+        roll =r;
+    }
+    Hero(Hero h){
+        name = h.name;
+        age=h.age;
+    }
+    void display(){
+        System.out.println("my name is : " + name +"  "+ "and my age is : " + age + " " +"my roll no. is : " + roll );
+    }
+}
